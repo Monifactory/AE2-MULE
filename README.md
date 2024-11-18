@@ -1,3 +1,9 @@
+# AE2 Modern Unofficial Life Extension
+
+This is an unofficial fork of AE2 keeping it alive on 1.20.1. Currently it's in the beginning stages so this readme isn't customized at all, so all the links and such just go to AE2's orginal links.
+
+------ BEGIN ORIGINAL README ------
+
 [![Build master](https://img.shields.io/github/actions/workflow/status/AppliedEnergistics/Applied-Energistics-2/build.yml?style=flat-square&branch=master)](https://github.com/AppliedEnergistics/Applied-Energistics-2/actions?query=workflow%3A%22Build+master%22)
 [![Latest Release](https://img.shields.io/github/v/release/AppliedEnergistics/Applied-Energistics-2?style=flat-square&label=Release)](https://github.com/AppliedEnergistics/Applied-Energistics-2/releases)
 [![Latest PreRelease](https://img.shields.io/github/v/release/AppliedEnergistics/Applied-Energistics-2?include_prereleases&style=flat-square&label=Pre)](https://github.com/AppliedEnergistics/Applied-Energistics-2/releases)
