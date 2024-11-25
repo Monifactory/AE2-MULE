@@ -35,8 +35,12 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import appeng.api.client.AEKeyRendering;
 import appeng.api.config.FuzzyMode;
+import appeng.api.config.TypeFilter;
 import appeng.api.stacks.AEFluidKey;
+import appeng.api.stacks.AEKeyType;
+import appeng.api.stacks.AEKeyTypes;
 import appeng.api.stacks.GenericStack;
+import appeng.api.storage.AEKeyFilter;
 import appeng.api.storage.StorageCells;
 import appeng.api.storage.cells.ICellWorkbenchItem;
 import appeng.core.definitions.AEItems;
@@ -48,13 +52,20 @@ import appeng.me.cells.CreativeCellHandler;
 import appeng.util.ConfigInventory;
 
 public class CreativeCellItem extends AEBaseItem implements ICellWorkbenchItem {
+    private AEKeyFilter type = TypeFilter.ALL.getFilter();
+    
     public CreativeCellItem(Properties props) {
         super(props);
     }
 
+    public CreativeCellItem(Properties props, AEKeyType type) {
+        this(props);
+        this.type = type.filter();
+    }
+
     @Override
     public ConfigInventory getConfigInventory(ItemStack is) {
-        return CellConfig.create(is);
+        return CellConfig.create(type, is);
     }
 
     @Override

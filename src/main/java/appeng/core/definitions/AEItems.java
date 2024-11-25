@@ -35,6 +35,7 @@ import net.minecraft.world.item.Rarity;
 import appeng.api.ids.AECreativeTabIds;
 import appeng.api.ids.AEItemIds;
 import appeng.api.stacks.AEKeyType;
+import appeng.api.stacks.AEKeyTypes;
 import appeng.api.upgrades.Upgrades;
 import appeng.api.util.AEColor;
 import appeng.core.AEConfig;
@@ -244,8 +245,8 @@ public final class AEItems {
     /// CELLS
     ///
 
-    public static final ItemDefinition<CreativeCellItem> ITEM_CELL_CREATIVE = item("Creative ME Item Cell", AEItemIds.ITEM_CELL_CREATIVE, p -> new CreativeCellItem(p.stacksTo(1).rarity(Rarity.EPIC)));
-    public static final ItemDefinition<CreativeCellItem> FLUID_CELL_CREATIVE = item("Creative ME Fluid Cell", AEItemIds.FLUID_CELL_CREATIVE, p -> new CreativeCellItem(p.stacksTo(1).rarity(Rarity.EPIC)));
+    public static final ItemDefinition<CreativeCellItem> ITEM_CELL_CREATIVE = item("Creative ME Item Cell", AEItemIds.ITEM_CELL_CREATIVE, p -> new CreativeCellItem(p.stacksTo(1).rarity(Rarity.EPIC), AEKeyType.items()));
+    public static final ItemDefinition<CreativeCellItem> FLUID_CELL_CREATIVE = item("Creative ME Fluid Cell", AEItemIds.FLUID_CELL_CREATIVE, p -> new CreativeCellItem(p.stacksTo(1).rarity(Rarity.EPIC), AEKeyType.fluids()));
     public static final ItemDefinition<ViewCellItem> VIEW_CELL = item("View Cell", AEItemIds.VIEW_CELL, p -> new ViewCellItem(p.stacksTo(1)));
 
     public static final ItemDefinition<BasicStorageCell> ITEM_CELL_1K = item("1k ME Item Storage Cell", AEItemIds.ITEM_CELL_1K, p -> new BasicStorageCell(p.stacksTo(1), CELL_COMPONENT_1K, ITEM_CELL_HOUSING, 0.5f, 1, 8, 63, AEKeyType.items()));
